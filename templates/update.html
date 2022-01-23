@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}  Update  {% endblock title %}
+
+{% block body %}
+
+    <div class="container my-5">
+        <h3>Update a note</h3>
+        <form action="/update/{{note.sno}}" method="POST">
+            <div class="my-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" name='title' value='{{note.title}}' id="title" placeholder="New Notes Titile">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Description</label>
+                <textarea class="form-control" name='desc' id="desc" placeholder="Details of the Notes" rows="3">{{note.desc}}</textarea>
+            </div>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfAVvQKul3km1ujhtnG8sru26bJdtJV7oc9FgY_T_YgdzcKx76Q8WnhDH0OIoYiow8n1I&usqp=CAU" width=400 height="300" alt="img" align="right">
+
+            <div ng-app="">
+                <br>
+                <input type="checkbox" name="isAgreed" ng-model="isAgreed" />  Please tick this box
+                <br />
+                <button ng-disabled="!isAgreed" type="submit" class="btn btn-outline-dark my-3">Update</button>
+            </div>
+  
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="http://code.angularjs.org/1.2.0/angular.min.js"></script>
+
+{% endblock body %}
