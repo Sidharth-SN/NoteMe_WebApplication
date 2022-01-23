@@ -1,0 +1,82 @@
+#navbar{
+    position: sticky;
+    top: 0px;
+    width: 100%; 
+}
+
+ #snackbar {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #333;
+    color: #fff; 
+    text-align: center; 
+    border-radius: 2px; 
+    padding: 16px;
+    position: fixed; 
+    z-index: 1; 
+    left: 50%;
+    bottom: 30px;
+  }
+
+  .line {
+    display: inline-block;
+    width: 100%;
+    border-top: 0.2px solid rgb(189, 188, 188);
+  }
+
+  .text-color{
+    color: rgb(63, 63, 63);
+  }
+  .end{
+    padding-left: 90px;
+  }
+
+  .dropdown-menu{
+    max-width: 14%;
+  }
+
+  .search{
+    max-width: 20%;
+  }
+
+  #snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  } 
+
+
+  #topspace{
+    margin-top: 20px;
+}
+
+.main {
+    
+    background-color: ivory;
+}
+
+.modal-backdrop
+{   
+    display: none;    
+}
