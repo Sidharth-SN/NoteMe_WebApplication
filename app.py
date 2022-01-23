@@ -50,4 +50,5 @@ def delete(sno):
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(debug = True, port = 8080)
+#     put debug = True for showing errors in the browser
+    app.run(port = 8080)
